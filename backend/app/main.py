@@ -11,8 +11,12 @@ from app.api.students import router as students_router
 from app.api.trainings import router as trainings_router
 from app.api.records import router as records_router
 from app.api.dashboard import router as dashboard_router
+from app.api.evaluations import router as evaluations_router
+from app.api.rag import router as rag_router
 
-# 创建数据库表
+# 创建数据库表（含扩展模型）
+from app.models.models_ext import Evaluation, Document, ChatMessage  # noqa: F401
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -35,6 +39,8 @@ app.include_router(students_router)
 app.include_router(trainings_router)
 app.include_router(records_router)
 app.include_router(dashboard_router)
+app.include_router(evaluations_router)
+app.include_router(rag_router)
 
 
 @app.get("/")

@@ -21,6 +21,15 @@
         <span class="nav-icon">📝</span>
         <span>测评记录</span>
       </router-link>
+      <div class="nav-divider"></div>
+      <router-link to="/evaluation">
+        <span class="nav-icon">🎓</span>
+        <span>柯氏评估</span>
+      </router-link>
+      <router-link to="/knowledge-base">
+        <span class="nav-icon">🤖</span>
+        <span>知识库问答</span>
+      </router-link>
     </div>
   </nav>
   <main class="main-content">

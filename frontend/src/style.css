@@ -95,6 +95,12 @@ body {
   text-align: center;
 }
 
+.nav-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 10px 16px;
+}
+
 /* ── 主内容区 ── */
 .main-content {
   flex: 1;
